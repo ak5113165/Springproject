@@ -21,7 +21,6 @@ public class ProductController {
         return "Welcome this endpoint is not secure";
     }
 
-//
     @GetMapping("/all")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public List<Product> getAllTheProducts() {

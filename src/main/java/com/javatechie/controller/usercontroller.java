@@ -1,7 +1,7 @@
 package com.javatechie.controller;
 
 import com.javatechie.entity.UserInfo;
-import com.javatechie.service.ProductService;
+import com.javatechie.service.Userservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,13 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class usercontroller {
 
     @Autowired
-    private ProductService service;
+    private Userservice service;
 
-    public usercontroller{
 
-    }
     @PostMapping({"/new"})
-    public String addNewUser(@RequestBody UserInfo userInfo) {
-        return this.service.addUser(userInfo);
+    public String AddNewUser(@RequestBody UserInfo userInfo) {
+        return this.service.AddUser(userInfo);
     }
 }
