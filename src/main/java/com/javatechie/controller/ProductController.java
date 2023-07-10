@@ -21,11 +21,7 @@ public class ProductController {
         return "Welcome this endpoint is not secure";
     }
 
-    @PostMapping("/new")
-    public String addNewUser(@RequestBody UserInfo userInfo){
-        return service.addUser(userInfo);
-    }
-
+//
     @GetMapping("/all")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public List<Product> getAllTheProducts() {
